@@ -12,8 +12,8 @@ function main() {
         const stats = group.getStatsFor('LAST_7_DAYS')
         return forEach([ group.getName(), stats.getConversions(), stats.getClicks(), stats.getImpressions() ], 'td')
     })
-    const test = new Template(template)
-    const html = test.parse({
+    const body = new Template(template)
+    const html = body.parse({
         style: styles,
         rows: forEach(hasConversions, 'tr', { class: 'table-item' })
     })
@@ -24,4 +24,4 @@ function main() {
         htmlBody: html
     })
 }
-main() 
+main()

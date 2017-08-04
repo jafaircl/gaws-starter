@@ -540,8 +540,8 @@ function main() {
         var stats = group.getStatsFor('LAST_7_DAYS');
         return forEach([group.getName(), stats.getConversions(), stats.getClicks(), stats.getImpressions()], 'td');
     });
-    var test = new Template(template);
-    var html = test.parse({
+    var body = new Template(template);
+    var html = body.parse({
         style: styles,
         rows: forEach(hasConversions, 'tr', { class: 'table-item' })
     });
