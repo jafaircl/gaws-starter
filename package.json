@@ -1,0 +1,30 @@
+{
+  "name": "gaws-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "types": "./index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-types": "npm run install-adwords-scripts-typings && npm run install-html-css-typings",
+    "install-adwords-scripts-typings": "typings install file:typings/adwords-scripts/adwords-scripts.d.ts --save --global",
+    "install-html-css-typings": "typings install file:typings/html-css/html-css.d.ts --save --global",
+    "watch": "rollup -c -w",
+    "build": "rollup -c --environment NODE_ENV:prod"
+  },
+  "author": "Jonathan Faircloth",
+  "license": "MIT",
+  "dependencies": {
+    "@gaws/core": "0.0.4-5",
+    "@gaws/html": "0.0.4-5",
+    "rollup-plugin-uglify": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/google-apps-script": "0.0.13",
+    "rollup": "^0.45.2",
+    "rollup-plugin-html": "^0.2.1",
+    "rollup-plugin-scss": "^0.3.0",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-watch": "^4.3.1"
+  }
+}
