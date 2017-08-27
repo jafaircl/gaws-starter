@@ -19,6 +19,7 @@
     "@gaws/html": "0.0.4-5"
   },
   "devDependencies": {
+    "@types/google-adwords-scripts": "^1.0.0",
     "@types/google-apps-script": "0.0.13",
     "rollup": "^0.45.2",
     "rollup-plugin-html": "^0.2.1",
